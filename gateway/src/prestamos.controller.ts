@@ -1,33 +1,58 @@
 import {
   Controller,
+  ForbiddenException,
   Get,
   Headers,
   UnauthorizedException,
 } from '@nestjs/common';
 
-/**
- * La pieza gemela de `libros.controller.ts`.
- *
- * Es el mismo patrón con cuatro cosas cambiadas: el nombre del archivo, la ruta
- * del `@Controller`, el nombre de la clase y **el puerto del `fetch`**. Ese
- * último es el que muerde: dejar el 3001 no da ningún error, responde 200 con
- * los libros, y cuesta un rato darse cuenta.
- */
+import {
+  verificar,
+  tieneScope,
+  estaEnGrupo,
+} from './auth/verificador';
+
 @Controller('v1/prestamos')
 export class PrestamosController {
-  // El `Promise<unknown>` de abajo es lo único que no está tal cual en la guía de
-  // L1: sin él, el lint que trae Nest reclama que se devuelve un `any`. Y dice
-  // algo cierto —el cuerpo de una respuesta HTTP no tiene tipo hasta que alguien
-  // lo revise—, así que vale dejarlo escrito.
   @Get()
   async listar(
     @Headers('authorization') authorization?: string,
   ): Promise<unknown> {
-    if (!authorization) {
-      throw new UnauthorizedException('falta el header Authorization');
+    let claims;
+
+    // Autenticación del token
+    try {
+      claims = await verificar(authorization);
+    } catch (e) {
+      throw new UnauthorizedException(
+        (e as Error).message,
+      );
     }
 
-    const respuesta = await fetch('http://localhost:3002/prestamos');
+    // Debe tener exactamente este scope
+    if (!tieneScope(claims, 'biblioteca/libros.leer')) {
+      throw new ForbiddenException(
+        'te falta el permiso biblioteca/libros.leer',
+      );
+    }
+
+    // Debe pertenecer al grupo bibliotecarios
+    if (!estaEnGrupo(claims, 'bibliotecarios')) {
+      throw new ForbiddenException(
+        'debes pertenecer al grupo bibliotecarios',
+      );
+    }
+
+    const respuesta = await fetch(
+      'http://localhost:3002/prestamos',
+    );
+
+    if (!respuesta.ok) {
+      throw new Error(
+        `Error en el servicio de préstamos: ${respuesta.status}`,
+      );
+    }
+
     return respuesta.json();
   }
 }

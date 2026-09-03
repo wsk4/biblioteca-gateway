@@ -1,5 +1,7 @@
+import 'dotenv/config';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
+
 
 /**
  * El gateway, en HTTP sobre el 8080.
