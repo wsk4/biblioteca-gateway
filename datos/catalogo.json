@@ -1,0 +1,271 @@
+{
+  "generado": "2026-09-13T17:18:28.324Z",
+  "fuente": "respaldo-local-sintetico",
+  "sinopsis": "respaldo-local-sintetico",
+  "libros": [
+    {
+      "id": 1,
+      "titulo": "La memoria del sur",
+      "autor": "Elena Rios",
+      "anio": 1980,
+      "paginas": 120,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 1
+    },
+    {
+      "id": 2,
+      "titulo": "El mapa del sur",
+      "autor": "Tomas Vidal",
+      "anio": 1981,
+      "paginas": 127,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 2
+    },
+    {
+      "id": 3,
+      "titulo": "La biblioteca del sur",
+      "autor": "Amira Soto",
+      "anio": 1982,
+      "paginas": 134,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 3
+    },
+    {
+      "id": 4,
+      "titulo": "El viaje del sur",
+      "autor": "Lucia Campos",
+      "anio": 1983,
+      "paginas": 141,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 4
+    },
+    {
+      "id": 5,
+      "titulo": "La ciudad del sur",
+      "autor": "Elena Rios",
+      "anio": 1984,
+      "paginas": 148,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 1
+    },
+    {
+      "id": 6,
+      "titulo": "El jardin del sur",
+      "autor": "Tomas Vidal",
+      "anio": 1985,
+      "paginas": 155,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 2
+    },
+    {
+      "id": 7,
+      "titulo": "La memoria de la niebla",
+      "autor": "Amira Soto",
+      "anio": 1986,
+      "paginas": 162,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 3
+    },
+    {
+      "id": 8,
+      "titulo": "El mapa de la niebla",
+      "autor": "Lucia Campos",
+      "anio": 1987,
+      "paginas": 169,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 4
+    },
+    {
+      "id": 9,
+      "titulo": "La biblioteca de la niebla",
+      "autor": "Elena Rios",
+      "anio": 1988,
+      "paginas": 176,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 1
+    },
+    {
+      "id": 10,
+      "titulo": "El viaje de la niebla",
+      "autor": "Tomas Vidal",
+      "anio": 1989,
+      "paginas": 183,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 2
+    },
+    {
+      "id": 11,
+      "titulo": "La ciudad de la niebla",
+      "autor": "Amira Soto",
+      "anio": 1990,
+      "paginas": 190,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 3
+    },
+    {
+      "id": 12,
+      "titulo": "El jardin de la niebla",
+      "autor": "Lucia Campos",
+      "anio": 1991,
+      "paginas": 197,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 4
+    },
+    {
+      "id": 13,
+      "titulo": "La memoria del futuro",
+      "autor": "Elena Rios",
+      "anio": 1992,
+      "paginas": 204,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 1
+    },
+    {
+      "id": 14,
+      "titulo": "El mapa del futuro",
+      "autor": "Tomas Vidal",
+      "anio": 1993,
+      "paginas": 211,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 2
+    },
+    {
+      "id": 15,
+      "titulo": "La biblioteca del futuro",
+      "autor": "Amira Soto",
+      "anio": 1994,
+      "paginas": 218,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 3
+    },
+    {
+      "id": 16,
+      "titulo": "El viaje del futuro",
+      "autor": "Lucia Campos",
+      "anio": 1995,
+      "paginas": 225,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 4
+    },
+    {
+      "id": 17,
+      "titulo": "La ciudad del futuro",
+      "autor": "Elena Rios",
+      "anio": 1996,
+      "paginas": 232,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 1
+    },
+    {
+      "id": 18,
+      "titulo": "El jardin del futuro",
+      "autor": "Tomas Vidal",
+      "anio": 1997,
+      "paginas": 239,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 2
+    },
+    {
+      "id": 19,
+      "titulo": "La memoria de las mareas",
+      "autor": "Amira Soto",
+      "anio": 1998,
+      "paginas": 246,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 3
+    },
+    {
+      "id": 20,
+      "titulo": "El mapa de las mareas",
+      "autor": "Lucia Campos",
+      "anio": 1999,
+      "paginas": 253,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 4
+    },
+    {
+      "id": 21,
+      "titulo": "La biblioteca de las mareas",
+      "autor": "Elena Rios",
+      "anio": 2000,
+      "paginas": 260,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 1
+    },
+    {
+      "id": 22,
+      "titulo": "El viaje de las mareas",
+      "autor": "Tomas Vidal",
+      "anio": 2001,
+      "paginas": 267,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 2
+    },
+    {
+      "id": 23,
+      "titulo": "La ciudad de las mareas",
+      "autor": "Amira Soto",
+      "anio": 2002,
+      "paginas": 274,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 3
+    },
+    {
+      "id": 24,
+      "titulo": "El jardin de las mareas",
+      "autor": "Lucia Campos",
+      "anio": 2003,
+      "paginas": 281,
+      "categoria": "novela",
+      "isbn13": null,
+      "sinopsis": "Personajes ficticios recorren novela y descubren una historia compartida.",
+      "ejemplares": 4
+    }
+  ]
+}

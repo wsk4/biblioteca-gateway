@@ -33,3 +33,11 @@ npm-debug.log*
 .idea/
 .vscode/*
 !.vscode/extensions.json
+
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+ficha.txt
+cuerpo.json

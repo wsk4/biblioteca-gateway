@@ -1,0 +1,93 @@
+{
+  "generado": "2026-09-13T17:18:28.324Z",
+  "fuente": "respaldo-local-sintetico",
+  "sinopsis": "respaldo-local-sintetico",
+  "prestamos": [
+    {
+      "id": 1,
+      "libroId": 1,
+      "usuarioSub": "c4287498-6001-70d5-9f87-6c44881641cb",
+      "desde": "2026-08-30",
+      "hasta": "2026-09-13",
+      "devuelto": true
+    },
+    {
+      "id": 2,
+      "libroId": 4,
+      "usuarioSub": "c4287498-6001-70d5-9f87-6c44881641cb",
+      "desde": "2026-08-31",
+      "hasta": "2026-09-14",
+      "devuelto": false
+    },
+    {
+      "id": 3,
+      "libroId": 7,
+      "usuarioSub": "c4287498-6001-70d5-9f87-6c44881641cb",
+      "desde": "2026-09-01",
+      "hasta": "2026-09-15",
+      "devuelto": false
+    },
+    {
+      "id": 4,
+      "libroId": 10,
+      "usuarioSub": "c4287498-6001-70d5-9f87-6c44881641cb",
+      "desde": "2026-09-02",
+      "hasta": "2026-09-16",
+      "devuelto": false
+    },
+    {
+      "id": 5,
+      "libroId": 13,
+      "usuarioSub": "c4287498-6001-70d5-9f87-6c44881641cb",
+      "desde": "2026-09-03",
+      "hasta": "2026-09-17",
+      "devuelto": true
+    },
+    {
+      "id": 6,
+      "libroId": 16,
+      "usuarioSub": "00000000-0000-4000-8000-000000000001",
+      "desde": "2026-09-04",
+      "hasta": "2026-09-18",
+      "devuelto": false
+    },
+    {
+      "id": 7,
+      "libroId": 19,
+      "usuarioSub": "00000000-0000-4000-8000-000000000001",
+      "desde": "2026-09-05",
+      "hasta": "2026-09-19",
+      "devuelto": false
+    },
+    {
+      "id": 8,
+      "libroId": 22,
+      "usuarioSub": "00000000-0000-4000-8000-000000000001",
+      "desde": "2026-09-06",
+      "hasta": "2026-09-20",
+      "devuelto": false
+    },
+    {
+      "libroId": 2,
+      "usuarioSub": "prueba",
+      "devuelto": true,
+      "id": 9
+    },
+    {
+      "libroId": 2,
+      "usuarioSub": "24387408-6071-7012-5bee-db4846a5d377",
+      "desde": "2026-09-13",
+      "hasta": "2026-09-27",
+      "devuelto": false,
+      "id": 10
+    },
+    {
+      "libroId": 3,
+      "usuarioSub": "24387408-6071-7012-5bee-db4846a5d377",
+      "desde": "2026-09-13",
+      "hasta": "2026-09-27",
+      "devuelto": false,
+      "id": 11
+    }
+  ]
+}

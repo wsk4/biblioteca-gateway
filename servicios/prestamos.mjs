@@ -1,13 +1,47 @@
 import { createServer } from 'node:http';
+import { readFileSync, writeFileSync } from 'node:fs';
 
-const prestamos = [
-  { id: 501, libroId: 1, lector: 'ana.perez@duocuc.cl',   vence: '2026-09-02', devuelto: false },
-  { id: 502, libroId: 3, lector: 'luis.rojas@duocuc.cl',  vence: '2026-08-28', devuelto: false },
-  { id: 503, libroId: 1, lector: 'sofia.mella@duocuc.cl', vence: '2026-08-15', devuelto: true  },
-];
+const ARCHIVO = new URL('../datos/prestamos.json', import.meta.url);
+const leer = () => JSON.parse(readFileSync(ARCHIVO, 'utf8'));
+const guardar = (d) => writeFileSync(ARCHIVO, JSON.stringify(d, null, 2), 'utf8');
 
-createServer((peticion, respuesta) => {
-  console.log(`[prestamos] ${peticion.method} ${peticion.url}`);
-  respuesta.writeHead(200, { 'Content-Type': 'application/json' });
-  respuesta.end(JSON.stringify(prestamos));
+const LATENCIA_SIMULADA_MS = 300;
+
+const json = (res, codigo, cuerpo) => {
+  res.writeHead(codigo, { 'Content-Type': 'application/json' });
+  res.end(JSON.stringify(cuerpo));
+};
+
+const leerCuerpo = async (peticion) => {
+  const trozos = [];
+  for await (const t of peticion) trozos.push(t);
+  return JSON.parse(Buffer.concat(trozos).toString() || '{}');
+};
+
+createServer(async (peticion, respuesta) => {
+  await new Promise((listo) => setTimeout(listo, LATENCIA_SIMULADA_MS));
+  const datos = leer();
+  const { method: metodo, url } = peticion;
+  console.log(`[prestamos] ${metodo} ${url}`);
+
+  if (metodo === 'GET') return json(respuesta, 200, datos.prestamos);
+
+  if (metodo === 'POST') {
+    const nuevo = await leerCuerpo(peticion);
+    nuevo.id = Math.max(0, ...datos.prestamos.map((p) => p.id)) + 1;   // el id lo pone el dueno del dato
+    datos.prestamos.push(nuevo);
+    guardar(datos);
+    return json(respuesta, 201, nuevo);
+  }
+
+  if (metodo === 'DELETE') {
+    const id = Number(url.split('/').pop());
+    const prestamo = datos.prestamos.find((p) => p.id === id);
+    if (!prestamo) return json(respuesta, 404, { mensaje: `no existe el prestamo ${id}` });
+    prestamo.devuelto = true;                     // devolver no es borrar
+    guardar(datos);
+    return json(respuesta, 200, prestamo);
+  }
+
+  json(respuesta, 405, { mensaje: `metodo ${metodo} no soportado` });
 }).listen(3002, () => console.log('microservicio de prestamos escuchando en http://localhost:3002'));
